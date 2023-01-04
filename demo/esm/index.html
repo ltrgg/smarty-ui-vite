@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../dist/assets/entry.f4e87f69.css">
+</head>
+
+<body>
+    <h1>Demo</h1>
+    <div id="app"></div>
+    <script type="module">
+        import { createApp } from "vue";
+        import {
+            SFCButton,
+            jsxButton,
+            myButton,
+        } from "../../dist/smarty-ui.esm.js"; //组件单独导出
+
+        createApp({
+            template: `
+            <SButton color="yellow" size="large"  icon="message" ></SButton>
+<jsxButton/>
+<SFCButton/>
+`,
+        })
+            .component(SFCButton.name, SFCButton)
+            .component(jsxButton.name, jsxButton)
+            .component(myButton.name, myButton)
+            .mount("#app");
+    </script>
+</body>
+
+</html>
