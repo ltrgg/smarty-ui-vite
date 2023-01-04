@@ -1,12 +1,12 @@
-const s :string = "hello world"
+const s: string = "hello world";
 console.log(s);
-import MyButton from "./button/Button"
+import MyButton from "./button/Button";
 import SFCButton from "./SFCButton.vue";
 import jsxButton from "./jsxButton";
 import { createApp } from "vue/dist/vue.esm-browser";
-import SmartyUI from './entry'
+import SmartyUI from "./entry";
 createApp({
-       template:`
+  template: `
        <div style="margin-bottom:20px;">
        <SButton color="blue">主要按钮</SButton>
        <SButton color="green">绿色按钮</SButton>
@@ -41,8 +41,8 @@ createApp({
        <SButton color="yellow" round plain icon="message"></SButton>
        <SButton color="red" round plain icon="delete"></SButton>
    </div>
-       `
-      })
-   .use(SmartyUI)
-.mount("#App");
+       `,
+})
+  .use(SmartyUI)
+  .mount("#App");
 // createApp(jsxButton).mount("#app")
